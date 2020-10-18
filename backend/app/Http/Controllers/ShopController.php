@@ -22,7 +22,7 @@ class ShopController extends Controller
         #ユーザークラスを取得
         $user=Auth::user();
         $shops = Shop::all();
-        return view('index', ['shops' => $shops]);
+        return view('index', ['shops' => $shops, 'user' => $user]);
     }
 
     public function show($id)
